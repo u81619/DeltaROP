@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>haiderSY | DeltaX</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      transition: background-color 0.4s, color 0.4s;
+    }.container {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.download-btn {
+  font-size: 1.2em;
+  background: linear-gradient(270deg, #ff00cc, #3333ff, #00ffcc);
+  background-size: 600% 600%;
+  animation: rgbglow 5s ease infinite;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+}
+
+.mode-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #ccc;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+@keyframes rgbglow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+</head>
+<body class="light-mode"><button class="mode-toggle" onclick="toggleMode()">الوضع الليلي / النهاري</button>
+
+  <div class="container">
+    <h1>موقع haiderSY لتحميل هاك DeltaX</h1>
+    <button class="download-btn" onclick="startDownload()">تحميل DeltaX 2.677</button>
+  </div>  <script>
+    function toggleMode() {
+      const body = document.body;
+      if (body.classList.contains('light-mode')) {
+        body.classList.replace('light-mode', 'dark-mode');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+      }
+    }
+
+    function startDownload() {
+      alert("جارِ تحميل DeltaX 2.677 ...");
+      // هنا ضع رابط التحميل الحقيقي
+      window.location.href = "https://example.com/DeltaX_2.677.zip";
+    }
+  </script></body>
+</html>
