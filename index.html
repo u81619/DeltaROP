@@ -8,7 +8,22 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       transition: background-color 0.4s, color 0.4s;
-    }.container {
+      overflow: hidden;
+    }.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/stars.png') repeat;
+  z-index: -1;
+  animation: moveStars 100s linear infinite;
+}
+
+@keyframes moveStars {
+  from {background-position: 0 0;}
+  to {background-position: -10000px 5000px;}
+}
+
+.container {
   text-align: center;
   padding: 80px 20px;
 }
@@ -16,7 +31,11 @@
 h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out, rgbglow 5s ease infinite;
+  background: linear-gradient(270deg, #ff00cc, #3333ff, #00ffcc);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .download-btn {
@@ -47,16 +66,17 @@ h1 {
   border-radius: 20px;
   cursor: pointer;
   transition: background 0.3s;
+  z-index: 1;
 }
 
 .dark-mode {
-  background-color: #121212;
+  background-color: #000000;
   color: white;
 }
 
 .light-mode {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: white;
 }
 
 @keyframes rgbglow {
@@ -72,7 +92,7 @@ h1 {
 
   </style>
 </head>
-<body class="light-mode"><button class="mode-toggle" onclick="toggleMode()">الوضع الليلي / النهاري</button>
+<body class="light-mode">  <div class="stars"></div><button class="mode-toggle" onclick="toggleMode()">الوضع الليلي / النهاري</button>
 
   <div class="container">
     <h1>موقع haiderSY لتحميل هاك DeltaX</h1>
@@ -88,7 +108,7 @@ h1 {
     }
 
     function startDownload() {
-      alert("سيتم نقلك الى رابط التحميل ...");
+      alert("سيتم نقلك الى رابط تحميل...");
       // هنا ضع رابط التحميل الحقيقي
       window.location.href = "https://www.mediafire.com/file/zajvxhyhhvghnob/Delta-2.677.762.apk/file";
     }
