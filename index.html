@@ -7,8 +7,9 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      transition: background-color 0.4s, color 0.4s;
       overflow: hidden;
+      background-color: #000;
+      color: white;
     }.stars {
   position: fixed;
   width: 100%;
@@ -56,29 +57,6 @@ h1 {
   transform: scale(1.05);
 }
 
-.mode-toggle {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: #ccc;
-  border: none;
-  padding: 10px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background 0.3s;
-  z-index: 1;
-}
-
-.dark-mode {
-  background-color: #000000;
-  color: white;
-}
-
-.light-mode {
-  background-color: #000000;
-  color: white;
-}
-
 @keyframes rgbglow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -92,23 +70,12 @@ h1 {
 
   </style>
 </head>
-<body class="light-mode">  <div class="stars"></div><button class="mode-toggle" onclick="toggleMode()">الوضع الليلي / النهاري</button>
-
-  <div class="container">
+<body>  <div class="stars"></div>  <div class="container">
     <h1>موقع haiderSY لتحميل هاك DeltaX</h1>
     <button class="download-btn" onclick="startDownload()">تحميل DeltaX 2.677</button>
   </div>  <script>
-    function toggleMode() {
-      const body = document.body;
-      if (body.classList.contains('light-mode')) {
-        body.classList.replace('light-mode', 'dark-mode');
-      } else {
-        body.classList.replace('dark-mode', 'light-mode');
-      }
-    }
-
     function startDownload() {
-      alert("سيتم نقلك الى رابط تحميل...");
+      alert("سيتم نقلك الى رابط نحميل ...");
       // هنا ضع رابط التحميل الحقيقي
       window.location.href = "https://www.mediafire.com/file/zajvxhyhhvghnob/Delta-2.677.762.apk/file";
     }
