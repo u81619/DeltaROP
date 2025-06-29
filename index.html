@@ -33,7 +33,7 @@
       -webkit-text-fill-color: transparent;
     }
 
-    .download-btn, .no-lag-btn {
+    .download-btn, .no-lag-btn, .reds-btn {
       font-size: 1.2em;
       background: linear-gradient(270deg, #ff00cc, #3333ff, #00ffcc);
       background-size: 600% 600%;
@@ -47,7 +47,7 @@
       box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
     }
 
-    .download-btn:hover, .no-lag-btn:hover {
+    .download-btn:hover, .no-lag-btn:hover, .reds-btn:hover {
       transform: scale(1.05);
     }
 
@@ -77,7 +77,8 @@
   <div class="container">
     <h1>موقع haiderSY لتحميل هاك DeltaX</h1>
     <button class="download-btn" onclick="startDownload()">تحميل DeltaX 2.677</button>
-    <button class="no-lag-btn" onclick="openNoLagTXT()">سكربت NO LAG ماب المزرعة</button>
+    <button class="no-lag-btn" onclick="openNoLagTXT()">سكربت NO LAG</button>
+    <button class="reds-btn" onclick="openRedsTXT()">سكربت ريدز</button>
     <div class="note">يتوفر آخر الإصدارات</div>
   </div>
 
@@ -91,6 +92,11 @@
     function openNoLagTXT() {
       // هنا ضع رابط الملف النصي الذي يحتوي على سكربت NO LAG
       window.location.href = "no-lag-script.txt"; // استبدل "no-lag-script.txt" بمسار الملف الحقيقي
+    }
+
+    function openRedsTXT() {
+      // هنا ضع رابط الملف النصي الذي يحتوي على سكربت ريدز
+      window.location.href = "reds-script.txt"; // استبدل "reds-script.txt" بمسار الملف الحقيقي
     }
   </script>
 </body>
