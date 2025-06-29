@@ -21,7 +21,6 @@
       padding: 80px 20px;
       position: relative;
       z-index: 1;
-      min-height: 100vh; /* لجعل الحاوية تأخذ كامل ارتفاع الصفحة */
     }
 
     h1 {
@@ -52,12 +51,8 @@
       transform: scale(1.05);
     }
 
-    /* تعديل النص ليكون في الأسفل */
     .note {
-      position: absolute;
-      bottom: 20px; /* تحديد المسافة من الأسفل */
-      left: 50%;
-      transform: translateX(-50%); /* مركز النص أفقيًا */
+      margin-top: 30px;
       font-size: 1.3em;
       animation: rgbglow 5s ease infinite;
       background: linear-gradient(270deg, #00ffff, #ff00cc, #00ffcc);
