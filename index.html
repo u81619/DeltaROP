@@ -61,43 +61,6 @@
       -webkit-text-fill-color: transparent;
     }
 
-    /* تنسيق قسم آخر الإصدارات */
-    .latest-versions {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 40px 20px;
-      margin-top: 50px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-    }
-
-    .latest-versions h2 {
-      font-size: 2em;
-      color: #00ffcc;
-      margin-bottom: 20px;
-    }
-
-    .latest-versions ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .latest-versions ul li {
-      font-size: 1.2em;
-      margin: 10px 0;
-      color: white;
-      background: linear-gradient(270deg, #ff00cc, #3333ff, #00ffcc);
-      background-size: 600% 600%;
-      animation: rgbglow 5s ease infinite;
-      padding: 10px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .latest-versions ul li:hover {
-      transform: scale(1.05);
-    }
-
     @keyframes rgbglow {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
@@ -114,38 +77,25 @@
   <div class="container">
     <h1>موقع haiderSY لتحميل هاك DeltaX</h1>
     <button class="download-btn" onclick="startDownload()">تحميل DeltaX 2.677</button>
-    <button class="no-lag-btn" onclick="openNoLagTXT()">سكربت NO LAG</button>
-    <button class="reds-btn" onclick="openRedsTXT()">سكربت ريدز</button>
+    <button class="no-lag-btn" onclick="openNoLagTXT()">سكربت NO LAG ماب المزرعة</button>
+    <button class="reds-btn" onclick="openRedsTXT()">سكربت ريدز بلوكس فروت</button>
     <div class="note">يتوفر آخر الإصدارات</div>
-  </div>
-
-  <!-- قسم آخر الإصدارات -->
-  <div class="latest-versions">
-    <h2>آخر الإصدارات:</h2>
-    <ul>
-      <li onclick="window.location.href='https://www.mediafire.com/file/zajvxhyhhvghnob/Delta-2.677.762.apk/file'">
-        DeltaX 2.677 - تحميل
-      </li>
-      <li onclick="window.location.href='no-lag-script.txt'">
-         سكربت NO LAG - تحميل
-      </li>
-      <li onclick="window.location.href='reds-script.txt'">
-        سكربت ريدز بلوكس فروت - تحميل
-      </li>
-    </ul>
   </div>
 
   <script>
     function startDownload() {
       alert("سيتم نقلك الى رابط تحميل من خلال ضفط نعم لو حسناً...");
+      // هنا ضع رابط التحميل الحقيقي
       window.location.href = "https://www.mediafire.com/file/zajvxhyhhvghnob/Delta-2.677.762.apk/file";
     }
 
     function openNoLagTXT() {
+      // هنا ضع رابط الملف النصي الذي يحتوي على سكربت NO LAG
       window.location.href = "no-lag-script.txt"; // استبدل "no-lag-script.txt" بمسار الملف الحقيقي
     }
 
     function openRedsTXT() {
+      // هنا ضع رابط الملف النصي الذي يحتوي على سكربت ريدز
       window.location.href = "reds-script.txt"; // استبدل "reds-script.txt" بمسار الملف الحقيقي
     }
   </script>
